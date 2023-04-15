@@ -1,0 +1,288 @@
+@media (max-width: 449.98px) {
+  .page {
+    background-color: #319b79;
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    color: white;
+    min-width: none;
+  }
+
+  .page input {
+    font-size: 11px;
+    height: 22px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-bottom: 15px;
+  }
+
+  .formControl {
+    margin-bottom: 35px;
+    display: grid;
+    place-items: center;
+  }
+
+  .formControl input {
+    width: 50%;
+    max-width: 500px;
+  }
+
+  .formControl div {
+    width: 53%;
+    max-width: 510px;
+  }
+
+  .signUp {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+    font-weight: 400;
+  }
+  .sectionTitle {
+    margin-bottom: 18px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 350;
+  }
+
+  .selectedState {
+    background-color: white;
+    border-radius: 5px;
+    color: gray;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .dropdownStatesContainer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: black;
+    background-color: white;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  .dropdownStates {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdownStates li {
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    cursor: pointer;
+  }
+
+  .clinicDetail {
+    flex: 1fr;
+    margin-right: 5px;
+  }
+}
+
+.formControl div {
+  width: 51.7%;
+  max-width: 510px;
+}
+
+.wholeBlockInput {
+  max-width: 560px;
+}
+
+.name {
+  display: flex;
+}
+
+.firstName,
+.lastName {
+  flex: 1;
+}
+
+.firstName {
+  margin-right: 20px;
+}
+
+.submitDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-bottom: 15px;
+}
+
+.submitButton {
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.clinicLocation {
+  display: flex;
+  max-width: 630px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown div {
+  width: auto;
+}
+
+.rangeLayout {
+  margin-top: 20px;
+}
+
+@media (min-width: 450px) {
+  .signUp {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30px;
+    font-weight: 400;
+  }
+  .sectionTitle {
+    margin-bottom: 18px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 350;
+  }
+
+  @media (max-width: 850px) {
+    .page {
+      background-color: #319b79;
+      font-family: sans-serif;
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
+      margin-bottom: 50px;
+      color: white;
+      min-width: none;
+    }
+  }
+
+  @media (min-width: 850.02px) {
+    .page {
+      background-color: #319b79;
+      font-family: sans-serif;
+      margin-top: 50px;
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom: 50px;
+      color: white;
+      min-width: none;
+    }
+  }
+
+  .page input {
+    font-size: 15px;
+    height: 27px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
+
+  .formControl {
+    margin-bottom: 35px;
+    display: grid;
+    place-items: center;
+  }
+
+  .formControl input {
+    width: 50%;
+    max-width: 500px;
+  }
+
+  @media (max-width: 649.98px) {
+    .formControl div {
+      width: 53%;
+      max-width: 510px;
+    }
+  }
+
+  @media (min-width: 1230px) and (max-width: 1430px) {
+    .formControl div {
+      width: 51%;
+      max-width: 510px;
+    }
+  }
+
+  @media ((min-width: 650px) and (max-width: 1229.98px)) or (min-width: 1430.02px) {
+    .formControl div {
+      width: 51.7%;
+      max-width: 510px;
+    }
+  }
+
+  .dropdown div {
+    width: auto;
+  }
+
+  @media (min-width: 1200px) {
+    .rangeLayout {
+      display: grid;
+      place-content: start;
+      flex: 1;
+    }
+
+    .diseaseLayout {
+      display: grid;
+      place-content: end;
+      flex: 1;
+      margin-right: 50px;
+    }
+  }
+
+  @media (min-width: 960px) and (max-width: 1199.98px) {
+    .rangeLayout {
+      display: grid;
+      place-content: center;
+      flex: 1;
+    }
+
+    .diseaseLayout {
+      display: grid;
+      place-content: end;
+      flex: 1;
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 959.98px) {
+    .rangeLayout {
+      margin-top: 20px;
+    }
+  }
+  .clinicDetail {
+    flex: 1fr;
+    margin-right: 17px;
+  }
+
+  .selectedState {
+    background-color: white;
+    border-radius: 5px;
+    color: gray;
+    padding-left: 5px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    left: -2px;
+  }
+}
