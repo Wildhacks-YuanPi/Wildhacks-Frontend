@@ -78,8 +78,8 @@ const AddItemPage = () => {
   const handleSubmitYes = async(e) => {
     e.preventDefault();
     let payload = {
-      "id" : 1,
-      "uid" : "b",
+      "id" : 3,
+      "uid" : "d",
       "name" : itemInfo.name,
       "condition" : 5,
       "sold" : 0,
@@ -235,7 +235,7 @@ const ItemInfo = ({ itemInfo, handleChange, condList, univList }) => {
         onChange={handleChange}
       />
 
-      <div>
+      <div className={styles.dropdown}>
         <select
           className={styles.selectedState1}
           onChange={handleChange}
