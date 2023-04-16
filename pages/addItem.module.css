@@ -1,0 +1,356 @@
+@media (max-width: 449.98px) {
+  .page {
+    background-color: #26735B;
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    color: white;
+    min-width: none;
+  }
+
+  .page input {
+    font-size: 11px;
+    height: 22px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-bottom: 15px;
+  }
+
+  .formControl {
+    margin-bottom: 35px;
+    display: grid;
+    place-items: center;
+  }
+
+  .formControl input {
+    width: 50%;
+    max-width: 500px;
+  }
+
+  .formControl div {
+    width: 53%;
+    max-width: 600;
+  }
+
+  .addItem {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    font-weight: 400;
+  }
+  .sectionTitle {
+    margin-bottom: 18px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 350;
+    text-align: center;
+  }
+
+  .selectedState {
+    background-color: white;
+    border-radius: 5px;
+    color: gray;
+    padding-left: 5px;
+    padding-right: 70px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    margin-right: 20px;
+    font-size: 11px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .dropdownStatesContainer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: black;
+    background-color: white;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  .dropdownStates {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdownStates li {
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    cursor: pointer;
+  }
+
+  .clinicDetail {
+    flex: 1fr;
+    margin-right: 5px;
+  }
+}
+
+.formControl div {
+  width: 51.7%;
+  max-width: 600px;
+}
+
+.wholeBlockInput {
+  max-width: 560px;
+}
+
+.wholeBlockParagraphInput {
+  max-width: 560px;
+  padding-bottom: 70px;
+}
+
+.name {
+  display: flex;
+}
+
+.firstName,
+.lastName {
+  flex: 1;
+}
+
+.firstName {
+  margin-right: 20px;
+}
+
+.submitDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.submitButton {
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #0D261E;
+  color: white;
+}
+
+.clinicLocation {
+  display: flex;
+  max-width: 630px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown div {
+  width: auto;
+}
+
+.rangeLayout {
+  margin-top: 20px;
+}
+
+@media (min-width: 450px) {
+  .signUp {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 0px;
+    font-weight: 400;
+  }
+  .sectionTitle {
+    margin-bottom: 18px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 350;
+    text-align: center;
+  }
+
+  @media (max-width: 850px) {
+    .page {
+      background-color: #26735b;
+      font-family: sans-serif;
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
+      margin-bottom: 50px;
+      color: white;
+      min-width: none;
+    }
+  }
+
+  @media (min-width: 850.02px) {
+    .page {
+      background-color: #26735b;
+      font-family: sans-serif;
+      margin-top: 50px;
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom: 50px;
+      color: white;
+      min-width: none;
+    }
+  }
+
+  .page input {
+    font-size: 15px;
+    height: 27px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
+
+  .formControl {
+    margin-bottom: 35px;
+    display: grid;
+    place-items: center;
+  }
+
+  .formControl input {
+    width: 50%;
+    max-width: 500px;
+  }
+
+  @media (max-width: 649.98px) {
+    .formControl div {
+      width: 53%;
+      max-width: 510px;
+    }
+  }
+
+  @media (min-width: 1230px) and (max-width: 1430px) {
+    .formControl div {
+      width: 51%;
+      max-width: 510px;
+    }
+  }
+
+  @media ((min-width: 650px) and (max-width: 1229.98px)) or (min-width: 1430.02px) {
+    .formControl div {
+      width: 51.7%;
+      max-width: 510px;
+    }
+  }
+
+  .dropdown div {
+    width: auto;
+  }
+
+  @media (min-width: 1200px) {
+    .rangeLayout {
+      display: grid;
+      place-content: start;
+      flex: 1;
+    }
+
+    .diseaseLayout {
+      display: grid;
+      place-content: end;
+      flex: 1;
+      margin-right: 50px;
+    }
+  }
+
+  @media (min-width: 960px) and (max-width: 1199.98px) {
+    .rangeLayout {
+      display: grid;
+      place-content: center;
+      flex: 1;
+    }
+
+    .diseaseLayout {
+      display: grid;
+      place-content: end;
+      flex: 1;
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 959.98px) {
+    .rangeLayout {
+      margin-top: 20px;
+    }
+  }
+  .clinicDetail {
+    flex: 1fr;
+    margin-right: 17px;
+  }
+
+  .selectedState1 {
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding-left: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 103px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    left: -2px;
+  }
+
+  .selectedState2 {
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding-left: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 64px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    left: -2px;
+  }
+}
+
+
+.button {
+  font-size: 15px;
+  margin-left: 155px;
+}
+
+.pricingPrompt {
+  font-size: 17px;
+  border: none;
+  border-radius: 3px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  background-color: #0D261E;
+  color: white;
+  /* box-shadow: 5px 5px 5px #0D261E; */
+}
+
+.returnButton {
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 10px;
+  /* background-color: #0D261E; */
+  background-color: white;
+  color: #0D261E;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+

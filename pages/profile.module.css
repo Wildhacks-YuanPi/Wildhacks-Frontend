@@ -365,6 +365,7 @@
     display: grid;
     grid-template-columns: 190px 190px;
     column-gap: 20px;
+    border-radius: 5px;
   }
 
   .nameAndEmailLabel,
@@ -383,6 +384,7 @@
     padding-left: 10px;
     width: 100%;
     overflow-wrap: break-word;
+    border-radius: 7px;
   }
 
   .name,
@@ -394,12 +396,7 @@
     padding-bottom: 10px;
     padding-left: 10px;
     width: 100%;
-  }
-
-  .clinicLocation {
-    display: grid;
-    grid-template-columns: 120px 100px 100px;
-    column-gap: 40px;
+    border-radius: 7px;
   }
 }
 
@@ -432,11 +429,6 @@
     padding-bottom: 10px;
     padding-left: 10px;
     width: 100%;
-  }
-
-  .clinicLocation {
-    display: grid;
-    grid-template-columns: 80px 50px 60px;
-    column-gap: 20px;
+    border-radius: 7px;
   }
 }
