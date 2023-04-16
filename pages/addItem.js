@@ -27,7 +27,7 @@ const AddItemPage = () => {
     if (hasPrice == 1) {
       setTimeout(() => {
         setHasPrice(2);
-        setItemInfo({ ...itemInfo, [price]: 1270 })
+        setItemInfo({...ItemInfo, price: 1270 })
       }, 1500);
     } 
   })
@@ -75,31 +75,39 @@ const AddItemPage = () => {
     }
   };
 
-  const handleSubmitYes = (e) => {
+  const handleSubmitYes = async(e) => {
     e.preventDefault();
-    payload = {
-      "id" : 0,
-      "uid" : "a",
+    let payload = {
+      "id" : 1,
+      "uid" : "b",
       "name" : itemInfo.name,
-      "condition" : itemInfo.condition,
+      "condition" : 5,
       "sold" : 0,
-      "price": itemInfo.price,
+      "price": 1000,
       "base": "Northwestern",
-      "description": itemInfo.description,
-      "date_added" : date,
+      "description": itemInfo.description
     }
-    fetch("http://localhost:4000/item/", { 
+   
+
+    let data = await fetch("http://localhost:4000/item/add/A", { 
       method: "POST", 
       headers: { "Content-Type": "application/json" }, 
       body: JSON.stringify(payload), 
-      }) 
-        .then((res) => res.json()) 
-        .then((data) => {
-          setClientSecret(data.clientSecret) 
-          setTotal(formatter.format(data.amount)) 
-          console.log(data)
-        }) 
+
+      })
+      let output = await data.json()
+      console.log(output)
+
+
+      // let data = await fetch("http://localhost:4000/user", {
+      //   method: "GET",
+      //   headers:{ "Content-Type": "application/json" }, 
+  
+      // })
+      // let output = await data.json()
+      // console.log(output)
   };
+   
 
   const handleSubmitNo = (e) => {
     e.preventDefault();
