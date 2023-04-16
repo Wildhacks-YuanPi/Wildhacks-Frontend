@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/addItem.js"
+    ],
+    "/mainpage": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/mainpage.js"
     ]
   },
   "ampFirstPages": []

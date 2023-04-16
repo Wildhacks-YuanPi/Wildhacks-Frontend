@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./signup.module.css";
+import Link from "next/link";
 
 const Signup = () => {
   // to change disease names/size, you only need to change the names in the list
@@ -23,7 +24,6 @@ const Signup = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     // change the required fields if needed
     if (
       signUpForm.firstName &&
@@ -61,13 +61,15 @@ const Signup = () => {
         />
 
         <div className={styles.submitDiv}>
-          <button
-            className={styles.submitButton}
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Submit
-          </button>
+          <Link href="/login">
+            <button
+              className={styles.submitButton}
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+          </Link>
         </div>
       </main>
     </>

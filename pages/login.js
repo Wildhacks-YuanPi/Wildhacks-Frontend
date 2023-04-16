@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./login.module.css";
+import Link from "next/link";
 
 const Login = () => {
   const [loginForm, setLoginForm] = useState({
@@ -15,8 +16,6 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-
     if (loginForm.email && loginForm.password) {
       setLoginInfo({ ...loginInfo, loginForm });
       setLoginForm({ email: "", password: "" });
@@ -49,13 +48,15 @@ const Login = () => {
         </div>
 
         <div className={styles.submitDiv}>
-          <button
-            className={styles.submitButton}
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Submit
-          </button>
+          <Link href="/mainpage">
+            <button
+              className={styles.submitButton}
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+          </Link>
         </div>
       </section>
     </>

@@ -1,11 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./addItem.module.css";
+import Link from "next/link";
 
 const AddItemPage = () => {
   // to change disease names/size, you only need to change the names in the list
   // and the name in the signUpForm useState
   const univList = ["Select University", "Northwestern University"];
-  const condList = ["Select Condition", "brand new", "new", "used", "damanged", "dysfunctional"];
+  const condList = [
+    "Select Condition",
+    "brand new",
+    "new",
+    "used",
+    "damanged",
+    "dysfunctional",
+  ];
   const date = new Date();
 
   const [hasPrice, setHasPrice] = useState(0);
@@ -27,10 +35,10 @@ const AddItemPage = () => {
     if (hasPrice == 1) {
       setTimeout(() => {
         setHasPrice(2);
-        setItemInfo({...ItemInfo, price: 1270 })
+        setItemInfo({ ...ItemInfo, price: 800 });
       }, 1500);
-    } 
-  })
+    }
+  });
 
   function handleFileChange(event) {
     setSelectedFile(event.target.files[0]);
@@ -75,55 +83,56 @@ const AddItemPage = () => {
     }
   };
 
-  const handleSubmitYes = async(e) => {
-    e.preventDefault();
+  const handleSubmitYes = async (e) => {
     let payload = {
-      "id" : 3,
-      "uid" : "d",
-      "name" : itemInfo.name,
-      "condition" : 5,
-      "sold" : 0,
-      "price": 1000,
-      "base": "Northwestern",
-      "description": itemInfo.description
-    }
-   
+      id: 5,
+      uid: "demo",
+      name: itemInfo.name,
+      condition: 5,
+      sold: 0,
+      price: 800,
+      base: "Northwestern",
+      description: itemInfo.description,
+    };
 
-    let data = await fetch("http://localhost:4000/item/add/A", { 
-      method: "POST", 
-      headers: { "Content-Type": "application/json" }, 
-      body: JSON.stringify(payload), 
+    // let data = await fetch("http://localhost:4000/item/add/A", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(payload),
+    // });
+    // let output = await data.json();
+    // console.log(output);
 
-      })
-      let output = await data.json()
-      console.log(output)
+    // let data = await fetch("http://localhost:4000/user", {
+    //   method: "GET",
+    //   headers:{ "Content-Type": "application/json" },
 
-
-      // let data = await fetch("http://localhost:4000/user", {
-      //   method: "GET",
-      //   headers:{ "Content-Type": "application/json" }, 
-  
-      // })
-      // let output = await data.json()
-      // console.log(output)
+    // })
+    // let output = await data.json()
+    // console.log(output)
   };
-   
 
   const handleSubmitNo = (e) => {
-    e.preventDefault();
     setHasPrice(0);
   };
 
   const handleReturnHomepage = (e) => {
-    e.preventDefault();
     // Go back to homepage dashboard
-  }
+  };
 
   if (hasPrice == 0) {
     return (
       <>
         <main className={styles.page}>
-          <button className={styles.returnButton} onClick={handleReturnHomepage}>Return</button>
+          <Link href="/mainpage">
+            <button
+              className={styles.returnButton}
+              onClick={handleReturnHomepage}
+            >
+              Return
+            </button>
+          </Link>
+
           <h2 className={styles.signUp}> Add the item you want to sell! </h2>
           <ItemInfo
             itemInfo={itemInfo}
@@ -137,7 +146,7 @@ const AddItemPage = () => {
             handleFileChange={handleFileChange}
             handleUpload={handleUpload}
           />
-        
+
           <div className={styles.submitDiv}>
             <button
               className={styles.submitButton}
@@ -149,7 +158,7 @@ const AddItemPage = () => {
           </div>
         </main>
       </>
-    )
+    );
   } else if (hasPrice == 1) {
     return (
       <>
@@ -161,7 +170,7 @@ const AddItemPage = () => {
             condList={condList}
             univList={univList}
           />
-        
+
           <div className={styles.submitDiv}>
             <div className={styles.pricingPrompt}>
               Estimating your item's fair price...
@@ -169,7 +178,7 @@ const AddItemPage = () => {
           </div>
         </main>
       </>
-    )
+    );
   } else {
     return (
       <>
@@ -181,25 +190,36 @@ const AddItemPage = () => {
             condList={condList}
             univList={univList}
           />
-        
+
           <div className={styles.submitDiv}>
             <div className={styles.pricingPrompt}>
-              We've priced your item as <u><b>1270 WeX</b></u> tokens, add to marketplace?
+              We've priced your item as{" "}
+              <u>
+                <b>800 WeX</b>
+              </u>{" "}
+              tokens, add to marketplace?
             </div>
-            <button className={styles.submitButton} 
-                    type="submit" 
-                    onClick={handleSubmitYes}>
-              Yes
-            </button>
-            <button className={styles.submitButton} 
-                    type="submit" 
-                    onClick={handleSubmitNo}>
+            <Link href="/mainpagee">
+              <button
+                className={styles.submitButton}
+                type="submit"
+                onClick={handleSubmitYes}
+              >
+                Yes
+              </button>
+            </Link>
+
+            <button
+              className={styles.submitButton}
+              type="submit"
+              onClick={handleSubmitNo}
+            >
               No
             </button>
           </div>
         </main>
       </>
-    )
+    );
   }
 };
 
@@ -270,17 +290,28 @@ const ItemInfo = ({ itemInfo, handleChange, condList, univList }) => {
   );
 };
 
-
-const UploadImage = ({ itemInfo, handleChange, handleFileChange, handleUpload }) => {
+const UploadImage = ({
+  itemInfo,
+  handleChange,
+  handleFileChange,
+  handleUpload,
+}) => {
   return (
     <form className={styles.formControl}>
-      <div className={styles.sectionTitle}> Upload Item Image for Inspection </div>  
-        <div className={styles.wholeBlockInput}>
-          <input type="file" className={styles.button} onChange={handleFileChange} />
-          {/* <button onClick={handleUpload} className={styles.button}>Upload</button> */}
-        </div>
+      <div className={styles.sectionTitle}>
+        {" "}
+        Upload Item Image for Inspection{" "}
+      </div>
+      <div className={styles.wholeBlockInput}>
+        <input
+          type="file"
+          className={styles.button}
+          onChange={handleFileChange}
+        />
+        {/* <button onClick={handleUpload} className={styles.button}>Upload</button> */}
+      </div>
     </form>
-  )
-}
+  );
+};
 
 export default AddItemPage;

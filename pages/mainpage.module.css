@@ -94,7 +94,8 @@
 .searchButton,
 .uploadIconContainer,
 .youtubeAppsIconContainer,
-.notificationsIconContainer {
+.notificationsIconContainer,
+.addItemContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,12 +124,48 @@
   white-space: nowrap;
 }
 
+.addItemContainer .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -25px;
+  left: 50px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
 .searchButton:hover .tooltip,
 .voiceSearchButton:hover .tooltip,
 .uploadIconContainer:hover .tooltip,
 .youtubeAppsIcon-Container:hover .tooltip,
-.notificationsIconContainer:hover .tooltip {
+.notificationsIconContainer:hover .tooltip,
+.addItemContainer:hover .tooltip {
   opacity: 1;
+}
+
+.addItemContainer {
+  width: 1;
+}
+
+.addItem {
+  margin-right: 60px;
+  background-color: #26735b;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
 }
 
 .searchIcon {
@@ -284,12 +321,12 @@
 
 .itemName {
   font-size: 19px;
-  width: 400px;
+  width: 500px;
   margin-bottom: 5px;
 }
 
 .usage {
-  color: rgb(102, 100, 100);
+  color: #26735b;
   margin-bottom: 30px;
 }
 
@@ -298,10 +335,20 @@
   font-weight: bold;
   margin-bottom: 15px;
 }
+.location2 {
+  border: none;
+  background-color: #26735b;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  bottom: -60px;
+  padding: 5px;
+}
 
 .location {
   border: none;
-  background-color: rgb(235, 235, 235);
+  background-color: #26735b;
+  color: white;
   border-radius: 5px;
   position: relative;
   bottom: -80px;

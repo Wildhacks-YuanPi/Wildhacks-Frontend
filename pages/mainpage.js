@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./mainpage.module.css";
 import { Tree } from "antd";
+import Link from "next/link";
 
 const treeData = [
   {
@@ -111,6 +112,13 @@ const mainpage = () => {
             </button>
           </div>
           <div className={styles.rightSection}>
+            <div className={styles.addItemContainer}>
+              <Link href="/addItem">
+                <div className={styles.addItem}>Add Item</div>
+              </Link>
+              <div className={styles.tooltip}>Press to add item</div>
+            </div>
+
             <div className={styles.notificationsIconContainer}>
               <img
                 className={styles.notificationsIcon}
@@ -154,10 +162,76 @@ const mainpage = () => {
                   Reebok EX-O-FIT Hi Men's Shoes
                 </div>
                 <div className={styles.usage}>Brand New</div>
-                <div className={styles.price}>$10</div>
+                <div className={styles.price}>30 WeX</div>
                 <div className={styles.description}>
-                  This shoe is literally so cool, oh my god. I am going to cry
-                  when it gets bought by someone else qwq.
+                  This shoe is brand new. No open box.
+                </div>
+                <button className={styles.location}>
+                  Location: Northwestern
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div className={styles.itemRowLayout}>
+              <div>
+                <img className={styles.img} src="thumbnails/thumbnail-2.webp" />
+              </div>
+              <div className={styles.itemDetail}>
+                <div className={styles.itemName}>
+                  Dell Precision 5550 15.6" Touchscreen i7-10850H 32GB RAM 1TB
+                  SSD Gray Laptop
+                </div>
+                <div className={styles.usage}>Used</div>
+                <div className={styles.price}>1,500 WeX</div>
+                <div className={styles.description}>
+                  The item in this listing is an Open Box. The asset tags were
+                  removed from the outer casing.
+                </div>
+                <button className={styles.location2}>
+                  Location: Northwestern
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div className={styles.itemRowLayout}>
+              <div>
+                <img className={styles.img} src="thumbnails/thumbnail-3.webp" />
+              </div>
+              <div className={styles.itemDetail}>
+                <div className={styles.itemName}>
+                  American Tourister 3 Piece Set
+                </div>
+                <div className={styles.usage}>Brand New</div>
+                <div className={styles.price}>200 WeX</div>
+                <div className={styles.description}>
+                  This 3 Piece Set includes a Carry-On, Medium & Large Spinner.
+                  New with tags.
+                </div>
+                <button className={styles.location}>
+                  Location: Northwestern
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div className={styles.itemRowLayout}>
+              <div>
+                <img className={styles.img} src="thumbnails/thumbnail-4.webp" />
+              </div>
+              <div className={styles.itemDetail}>
+                <div className={styles.itemName}>
+                  Purple Dyson V10 Animal + Cordless Vacuum Cleaner
+                </div>
+                <div className={styles.usage}>Damaged</div>
+                <div className={styles.price}>40 WeX</div>
+                <div className={styles.description}>
+                  The alternative nozzle is missing. Functional but used
+                  intensively.
                 </div>
                 <button className={styles.location}>
                   Location: Northwestern
