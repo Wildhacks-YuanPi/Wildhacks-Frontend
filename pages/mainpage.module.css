@@ -1,0 +1,309 @@
+.body a,
+.body p {
+  font-family: Roboto, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: black;
+  text-decoration: none;
+}
+
+.body {
+  font-family: Roboto, Arial;
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  padding-bottom: 30px;
+  background-color: rgb(248, 248, 248);
+}
+
+.header {
+  height: 70px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(228, 228, 228);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.hamburgerMenu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 20px;
+}
+
+.wexchangeLogo {
+  height: 55px;
+  width: 100px;
+  transform: scale(1.6);
+  position: relative;
+  right: 0px;
+}
+
+.middleSection {
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar {
+  flex: 1;
+  height: 36px;
+  width: 0;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.searchBar::placeholder {
+  font-size: 18px;
+}
+
+.searchButton {
+  height: 40px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+}
+
+.voiceSearchButton,
+.searchButton,
+.uploadIconContainer,
+.youtubeAppsIconContainer,
+.notificationsIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.searchButton .tooltip,
+.voiceSearchButton .tooltip,
+.uploadIconContainer .tooltip,
+.youtubeAppsIconContainer .tooltip,
+.notificationsIconContainer .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.searchButton:hover .tooltip,
+.voiceSearchButton:hover .tooltip,
+.uploadIconContainer:hover .tooltip,
+.youtubeAppsIcon-Container:hover .tooltip,
+.notificationsIconContainer:hover .tooltip {
+  opacity: 1;
+}
+
+.searchIcon {
+  height: 25px;
+}
+
+.voiceSearchButton {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(245, 245, 245);
+}
+
+.voiceSearchIcon {
+  height: 24px;
+}
+
+.rightSection {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.notificationsIcon {
+  height: 24px;
+  margin-right: 20px;
+}
+
+.notificationsIconContainer {
+  position: relative;
+}
+
+.notificationsCount {
+  position: absolute;
+  top: -2px;
+  right: 13px;
+  background-color: rgb(200, 0, 0);
+  color: white;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+}
+
+.currentUserPicture {
+  height: 32px;
+  width: 32px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 75px;
+    background-color: white;
+    width: 72px;
+    z-index: 200;
+    padding-top: 10px;
+  }
+
+  .sidebarLink {
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .sidebarLink:hover {
+    background-color: rgb(235, 235, 235);
+  }
+
+  .sidebarLink img {
+    height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .sidebarLink div {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1200.1px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 65px;
+    background-color: white;
+    width: 180px;
+    z-index: 200;
+    padding-top: 5px;
+  }
+
+  .sidebarLink {
+    height: 50px;
+    width: 160px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .sidebarLink:hover {
+    background-color: rgb(235, 235, 235);
+  }
+
+  .sidebarLink img {
+    height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .sidebarLink div {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .body {
+    padding-left: 204px;
+  }
+}
+
+.tree {
+  margin-top: 10px;
+}
+
+.itemRowLayout {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.img {
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+}
+
+.itemDetail {
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+.itemName {
+  font-size: 19px;
+  width: 400px;
+  margin-bottom: 5px;
+}
+
+.usage {
+  color: rgb(102, 100, 100);
+  margin-bottom: 30px;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.location {
+  border: none;
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+  position: relative;
+  bottom: -80px;
+  padding: 5px;
+}
