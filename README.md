@@ -2,6 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+First, run the backend server according to the README in WeXchange-Server repo
 First, run the development server:
 
 ```bash
