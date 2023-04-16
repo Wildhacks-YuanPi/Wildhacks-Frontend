@@ -1,9 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Welcome to WeXchange! This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
 First, run the backend server according to the README in WeXchange-Server repo.
-After the server successfully runs on localhost:4000,  run the development server:
+After the server successfully runs on localhost:4000,  install the dependencies:
+
+```
+npm install
+```
+
+Then, run the development server:
+
+
 
 ```bash
 npm run dev
